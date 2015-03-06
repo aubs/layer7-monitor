@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+    <appender name="file" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${log.dir}/layer7monitor.log"/>
+		 <param name="maxFileSize" value="2MB"/>
+		 <param name="maxBackupIndex" value="10"/>
+        <!--<param name="Threshold" value="INFO" /> -->
+        <layout class="org.apache.log4j.PatternLayout">
+        	<param name="ConversionPattern" value="%d %-5p %c{1}:%L %x - %m%n"/>
+        </layout>
+    </appender>   
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+	    <layout class="org.apache.log4j.PatternLayout">
+	        <param name="ConversionPattern" value="%d %-5p %c{1}:%L %x - %m%n"/>
+	    </layout>
+	</appender>    
+    <root>
+        <priority value="INFO"/>
+        <appender-ref ref="file"/>
+        <appender-ref ref="CONSOLE"/>                   
+    </root>
+
+</log4j:configuration>

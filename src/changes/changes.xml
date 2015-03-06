@@ -1,0 +1,18 @@
+<document xmlns="http://maven.apache.org/changes/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
+	<body>
+		<release version="2.0" date="unknown" description="Upgrade to Layer7 6.1">
+			<action type="add " date="2012-02-13" >Upgrade to Layer7 6.1</action>
+		</release>
+		<release version="1.2" date="unknown" description="Maintenance release">
+			<action type="fix " date="2011-10-27" >Ready for opensource</action>
+		</release>
+		<release version="1.1" date="2011-09-28" description="Maintenance release">
+			<action type="fix " date="2011-08-03" >WSDL retrieval from endpoints</action>
+		</release>
+		<release version="1.0" date="2011-08-03" description="First release build by Maven">
+			<action type="add" date="2011-08-03" >Add support for maven</action>
+		</release>
+	</body>
+</document>

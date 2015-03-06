@@ -1,0 +1,12 @@
+[2015-03-06 14:34:58] [info]  Commons Daemon procrun (1.0.5.0 32-bit) started
+[2015-03-06 14:34:58] [info]  Deleting service...
+[2015-03-06 14:34:58] [error] De opgegeven service is geen geïnstalleerde service.
+[2015-03-06 14:34:58] [info]  Delete service finished.
+[2015-03-06 14:34:58] [error] Commons Daemon procrun failed with exit value: 8 (Failed to )
+[2015-03-06 14:34:58] [error] De opgegeven service is geen geïnstalleerde service.
+[2015-03-06 14:35:03] [info]  Commons Daemon procrun (1.0.5.0 32-bit) started
+[2015-03-06 14:35:03] [info]  Deleting service...
+[2015-03-06 14:35:03] [error] De opgegeven service is geen geïnstalleerde service.
+[2015-03-06 14:35:03] [info]  Delete service finished.
+[2015-03-06 14:35:03] [error] Commons Daemon procrun failed with exit value: 8 (Failed to )
+[2015-03-06 14:35:03] [error] De opgegeven service is geen geïnstalleerde service.

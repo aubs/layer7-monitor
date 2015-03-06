@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.denhaag.nl/tw/layer7"
+	xmlns:wsg="http://schemas.denhaag.nl/tw/layer7" elementFormDefault="qualified">
+
+    <element name="service" type="wsg:ServiceType" />
+	<complexType name="ServiceType">
+		<sequence>
+			<element name="id" type="string" />
+			<element name="name" type="string" />
+			<element name="policyVersion" type="integer" />
+			<element name="version" type="integer" />
+			<element name="enabled" type="boolean" />
+			<element name="policyManagerPath" type="string" />
+			<element name="resolutionPath" type="string" />
+			<element name="protectedEndpoint" type="string"
+				minOccurs="0" />
+			<element name="wsSecurity" type="boolean" />
+			<element name="soap" type="boolean" />
+			<element name="soapVersion" type="string" minOccurs="0" />
+			<element name="internal" type="boolean" />
+			<element name="httpMethods" type="wsg:HttpMethodsType"
+				minOccurs="0" />
+			<element name="files" type="wsg:FilesType" minOccurs="0" />
+		</sequence>
+		<attribute name="generationDate" type="dateTime" use="required"></attribute>
+		<attribute name="generatorVersion" type="string"  use="required"></attribute>		
+	</complexType>
+
+	<complexType name="HttpMethodsType">
+		<sequence>
+			<element name="httpMethod" type="wsg:HttpMethodType"
+				maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	<complexType name="FilesType">
+		<sequence>
+			<element name="file" type="wsg:FileType" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+
+
+    <simpleType name="HttpMethodType">
+    	<restriction base="string">
+    		<enumeration value="GET"></enumeration>
+    		<enumeration value="PUT"></enumeration>
+    		<enumeration value="POST"></enumeration>
+    		<enumeration value="HEAD"></enumeration>
+    		<enumeration value="DELETE"></enumeration>
+    		<enumeration value="OPTIONS"></enumeration>
+    	</restriction>
+    </simpleType>
+
+	<complexType name="FileType">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="type" use="required">
+					<simpleType>
+						<restriction base="string">
+							<enumeration value="WSDL"></enumeration>
+							<enumeration value="XSD"></enumeration>
+						</restriction>
+					</simpleType>
+				</attribute>
+				<attribute name="root" type="boolean"/>
+			</extension>
+		</simpleContent>
+
+	</complexType>
+</schema>
